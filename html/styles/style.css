@@ -59,19 +59,6 @@ div.logo {
   min-height: 12em;
   display: table-cell;
   vertical-align: middle;
-  clear: both;
-  padding-left: 10vw;
-}
-
-.left {
-  vertical-align: middle;
-  display: table-cell;
-  width: 60vw;
-}
-
-.right {
-  display: table-cell;
-  width: 30vw; 
 }
 
 img.center {
@@ -81,8 +68,8 @@ img.center {
 
 img {
   display: block;
-  max-width: 65%;
-  height: auto;
+  max-width: 70vw;
+  max-height: 30vh;
 }
 
 td {
@@ -94,6 +81,6 @@ td {
   letter-spacing: 8px;
 }
 
-/*table {
+table {
   margin: auto auto auto 50vw;
-}*/
+}
