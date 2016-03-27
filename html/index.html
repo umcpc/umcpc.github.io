@@ -51,7 +51,7 @@
       </h2>
       <p>
         We meet each Thursday at 11AM in Alan Gilbert 101 to discuss algorithms and problems on paper. 
-        We also meet each Saturday at 5PM in Old Eng EDS1 to implement the algorithms.<br /><br />
+        We also meet each Saturday at 5PM in Old Eng EDS5 to implement the algorithms.<br /><br />
       </p>
       <p>
        Competition dates for the ANZAC League:<br />
@@ -160,7 +160,43 @@
         <a id="anchor" name="Meetings"></a>
         Meetings
       </h2>
-       <h3>
+      <h3>
+        26th March 5pm Old Engineering EDS5
+      </h3>
+      <p>
+        Another simulated competition was held on uhunt. <a
+        href="https://uhunt.onlinejudge.org/vcontest/20aeab17eceffe69cc7843d5ef60db0e">Scoreboard.</a> See if you can finish off the 
+        problem set during the week.
+      </p>
+      <p>
+        <a
+        href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=503">Dividing Coins<br /></a>
+        This can be done many ways using dynamic programming. The simplest is to keep track of the different amounts of coins that you can have
+	in your hand by means of a boolean array, and then consider how each coin adds more possible amounts.. 
+      </p>
+      <p>
+        <a
+        href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=499">Wormholes<br /></a>
+        This is a fairly straightforward application of the Bellman-Ford algorithm, solving for negative cycle detection.
+      </p>
+      <p>
+        <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=3671">Modex<br /></a>
+        Use fast exponentiation (google it). You must also use modulo arithmetic - just mod after every single operation.
+      </p>
+      <p>
+        <a
+        href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=1498">XYZZY<br /></a>
+        A more difficult use of Bellman-Ford algorithm. If there is a positive cycle you have infinite energy - always winnable if it is connected
+        to the destination. If not, you just need to check that the destination is reachable from the start, ignoring any vertices that have a best
+        path energy of 0 or less.
+      </p>
+      <p>
+        <a href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1081">Prime
+        Distance<br /></a>
+        This problem involves using a sieve of Eratosthenes. You use the seive to generate primes up to the square root of the upper bound. You then
+        use these primes to seive the numbers between the lower and upper bound.
+      </p>
+      <h3>
         24th March 11am Alan Gilbert 101 
       </h3>
       <p>
@@ -186,37 +222,38 @@
       </h3>
       <p>
         A simulation competition was held through uhunt, congratulations to the winners team Caviar! The theme of the
-        questions was dynamic programming.
+        questions was dynamic programming. <a
+        href="https://uhunt.onlinejudge.org/vcontest/c215cf6cf02bbf67e71b1fdef9845ed3">Scoreboard.</a>
       </p>
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=208">TEX
         Quotes<br /></a>
-        Hint: Simple string processing.
+        Simple string processing.
       </p>
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=3&page=show_problem&problem=44">Maximum
         Sum<br /></a>
-        Hint: Check the first ever meeting.
+        Check the first ever meeting.
       </p>
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1557">Divisible Group
         Sums<br /></a>
-        Hint: A variation of the knapsack problem. Clever brute force using memorisation.
+        A variation of the knapsack problem. Clever brute force using memorisation.
       </p>
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=384">Humble Numbers<br /></a>
-        Hint: The trick here is given in the sample output. You need humble numbers up to two billion, but there are
+        The trick here is given in the sample output. You need humble numbers up to two billion, but there are
         only about six thousand of them. Generate, don't check.
       </p>
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1437">Collecting
         Beepers<br /></a>
-        Hint: This is a travelling salesman problem with 11 nodes. It's just barely possible to brute force
+        This is a travelling salesman problem with 11 nodes. It's just barely possible to brute force
         with good code. If there were up to 16ish nodes, you'd need to use a variation of knapsack. The key is using
         bitmasks to represent different states of the graph.
       </p>
@@ -237,12 +274,12 @@
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1174">Dermuba Triangle<br /></a>
-        Hint: Back to some highschool trigonometry. Note that measurements are from the centre of each triangle.
+        Back to some highschool trigonometry. Note that measurements are from the centre of each triangle.
       </p>
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=2071">Billiard Bounces<br /></a>
-        Hint: Hope you've remembered your basic motion equations. Do this one mathematically, it's easier than it seems.
+        Hope you've remembered your basic motion equations. Do this one mathematically, it's easier than it seems.
       </p>
       <h3>
         10th March 11am Alan Gilbert 101
@@ -255,24 +292,24 @@
         <a
         href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=2525">SMS
         Typing<br /></a>
-        Hint: A few ways to do this one, hard code it if you have to.
+       A few ways to do this one, hard code it if you have to.
       </p>
       <p>
         <a
         href="https://imgur.com/OEewkgT">Double Free Sets<br /></a>
-        Hint: This was super popular, try writing it out to find patterns. It can be a process or a series formula.
+        This was super popular, try writing it out to find patterns. It can be a process or a series formula.
       </p>
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=3198">Highest
         Paid Toll<br /></a>
-        Hint: Bangladesh hype! You're going to need Dijkstra's for this one.
+        Bangladesh hype! You're going to need Dijkstra's for this one.
       </p>
       <p>
         <a
         href="https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=670&page=show_problem&problem=4797">Barry
         the Biker<br /></a>
-        Hint: You need to find a way to know which line Barry is on without calculating intersections or anything. After
+        You need to find a way to know which line Barry is on without calculating intersections or anything. After
         which you cannot use a traditional sort. Super hard conceptually, beautiful solution.
       </p>
       <h3>
@@ -286,13 +323,13 @@
         <a
         href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=12&page=show_problem&problem=976">Primary
         Arithmetic<br /></a>
-        Hint: Pretty straightforward, don't forget to add the previous carry!
+        Pretty straightforward, don't forget to add the previous carry!
       </p>
       <p>
         <a
         href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=3&page=show_problem&problem=44">Maximum 
         Sum<br /></a>
-        Hint: Trickier one, try to think DYNAMICally
+        Trickier one, try to think DYNAMICally
       </p>
       <h2>
         <a id="anchor" name="Contact us"></a>
