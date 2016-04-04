@@ -6,7 +6,8 @@ html {
 }
 
 p, h2, h3, table {
-  width: 600px;
+  width: 50vw;
+  min-width: 600px;
   margin: 0 auto 1em auto;
   line-height: 145%;
 }
@@ -75,7 +76,8 @@ img {
 td {
   font-family: 'Cinzel', serif;
   text-align: left;
-  font-size: 26px;
+  /*font-size: 26px;*/
+  font-size: 3vmin;
   /*font-weight: bold;*/
   line-height: 200%;
   letter-spacing: 8px;
