@@ -5,7 +5,7 @@ html {
   font-family: 'Crimson Text', serif;
 }
 
-p, h2, h3, table {
+ul, p, h2, h3, table {
   width: 50vw;
   min-width: 600px;
   margin: 0 auto 1em auto;
