@@ -1,13 +1,16 @@
+html, body{
+    margin: 0;
+    bottom: 0;
+    /* max-width: 100%; */
+    /* width: 100%; */
+}
+
 html {
   font-size: 16px;
-  /*font-family: 'Open Sans', sans-serif;*/
-  /*font-family: 'Roboto Slab', serif;*/
   font-family: 'Crimson Text', serif;
 }
 
 ul, p, h2, h3, table {
-  width: 50vw;
-  min-width: 600px;
   margin: 0 auto 1em auto;
   line-height: 145%;
 }
@@ -38,6 +41,7 @@ h3 {
 a {
   font-weight: bold;
   text-decoration: none;
+  border-bottom: 1px dotted #888;
   color: black;
 }
 
@@ -54,12 +58,63 @@ div.page {
   margin: 0 0 50vh 0;
 }
 
+@media screen and (max-width: 425px) {
+    .nav-item {
+        font-size: 7vmin;
+    }
+    nav {
+        flex-basis: 100%;
+    }
+    nav, section{
+        margin: 2rem;
+    }
+}
+
+@media screen and (min-width: 426px) {
+    ul, p, h2, h3, table {
+        width: 50vw;
+    }
+    ul, p, h2, h3{
+        min-width: 600px;
+    }
+    .nav-item {
+        font-size: 3vmin;
+    }
+    nav {
+        flex-basis: 50%;
+    }
+}
+
+.nav-item {
+    font-family: 'Cinzel', serif;
+    text-align: left;
+    line-height: 200%;
+    letter-spacing: 8px;
+}
+
+div.logo::after{
+    height: 0;
+    width: 0;
+    position: absolute;
+    bottom: 2rem;
+    left: 44%;
+    box-sizing: content-box;
+    /* right: 50%; */
+    border-top: 1em #ddd solid;
+    border-bottom: 1em transparent solid;
+    border-left: 1em transparent solid;
+    border-right: 1em transparent solid;
+    content: "";
+}
+
 div.logo {
-  height: 100vh;
-  width: 100vw;
-  min-height: 12em;
-  display: table-cell;
-  vertical-align: middle;
+    height: 100vh;
+    min-height: 12em;
+    position: relative;
+    /* border: 1px #f00 solid; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 img.center {
@@ -70,19 +125,5 @@ img.center {
 img {
   display: block;
   max-width: 70vw;
-  max-height: 30vh;
-}
-
-td {
-  font-family: 'Cinzel', serif;
-  text-align: left;
-  /*font-size: 26px;*/
-  font-size: 3vmin;
-  /*font-weight: bold;*/
-  line-height: 200%;
-  letter-spacing: 8px;
-}
-
-table {
-  margin: auto auto auto 50vw;
+  max-height: 30
 }
