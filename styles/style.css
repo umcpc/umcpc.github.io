@@ -97,7 +97,8 @@ div.logo::after{
     width: 0;
     position: absolute;
     bottom: 2rem;
-    left: 44%;
+    left: 50%;
+    margin-left: -1em;
     box-sizing: content-box;
     /* right: 50%; */
     border-top: 1em #ddd solid;
