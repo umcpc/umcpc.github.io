@@ -322,7 +322,7 @@ footer a, footer a:link, footer a:hover, footer a:visited {
 
 <script>
     $(function(){
-        $.ajax({url:"https://wiki.umcpc.org/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=UMCPC:Link&origin=" + location.origin,xhrFields:{withCredentials: true}}).done(function(a){
+        $.ajax({url:"https://wiki.umcpc.org/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=UMCPC:Link&origin=" + location.origin + "&*",xhrFields:{withCredentials: true}}).done(function(a){
             var ydata = a.query.pages[Object.keys(a.query.pages)[0]].revisions[0]['*'];
             var links = jsyaml.load(ydata).home;
             if (links && links.length){
