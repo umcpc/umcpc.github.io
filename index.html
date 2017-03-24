@@ -12,10 +12,14 @@
   <meta property="og:url" content="https://umcpc.org/">
   <meta property="og:image" content="https://umcpc.org/images/logo.png">
   <link rel="canonical" href="https://umcpc.org/">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.8.2/js-yaml.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Cinzel|Fanwood+Text:400,400i|Roboto:400,400i,600" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+
+
 
 <style id="jsbin-css">
 nav {
@@ -316,5 +320,33 @@ footer a, footer a:link, footer a:hover, footer a:visited {
     <!-- For enquiries: https://t.me/blueset -->
   </footer>
 
+<script>
+    $(function(){
+        $.ajax({url:"https://wiki.umcpc.org/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=UMCPC:Link&origin=" + location.origin,xhrFields:{withCredentials: true}}).done(function(a){
+            var ydata = a.query.pages[Object.keys(a.query.pages)[0]].revisions[0]['*'];
+            var links = jsyaml.load(ydata).home;
+            if (links && links.length){
+                var list = $("<ul></ul>").addClass("card-collection collection");
+                links.forEach(function(i){
+                    list.append($("<a></a>").addClass("collection-item wave-effect").attr("href", i.link)
+                                            .append($("<span></span>").addClass("title").text(i.name))
+                                            .append($("<div></div>").addClass("desc").text(i.desc)));
+                });
+                $("section.container").first().before(
+                    $("<section></section>").addClass("container").append(
+                        $("<div></div>").addClass("card")
+                        .append(
+                            $("<div></div>").addClass("card-heading card-title red").text("On-going")
+                        )
+                        .append(
+                            list
+                        )
+                    )
+                );
+            }
+        });
+    });
+
+</script>
 </body>
 </html>
