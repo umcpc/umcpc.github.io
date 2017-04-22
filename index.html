@@ -1,5 +1,5 @@
-
 <!DOCTYPE html>
+<meta name="robots" content="noindex">
 <html>
 <head>
   <meta charset="utf-8">
@@ -18,10 +18,28 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Cinzel|Fanwood+Text:400,400i|Roboto:400,400i,600" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
-
-
-
 <style id="jsbin-css">
+@font-face {
+  font-family: "EBG12";
+  src: url("https://fontlibrary.org/assets/fonts/eb-garamond/ad76a14ea9b136557b474c3445caea08/0ec1814f1bd8fab729cdcfd58e5d115f/EBGaramond12Italic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: 'EBG12';
+  src: url("https://fontlibrary.org/assets/fonts/eb-garamond/ad76a14ea9b136557b474c3445caea08/a8006b37472df2e365d439d4ec1f48bf/EBGaramond12Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+}
+
+p {
+  font-size: 16px;
+}
+
 nav {
   padding: 1px 0;
 }
@@ -39,12 +57,28 @@ nav .logo, nav .nav-content {
 }
 
 .nav-content {
-  margin: 5rem 0;
+  margin: 5rem 0 3rem 0;
+}
+
+i.mdi {
+  display: inline-block;
+}
+
+.button-label {
+  margin: 0.3rem 0 0.3rem 0.5rem;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: 0.15rem;
+}
+
+nav .nav-content .container {
+  color: #fff;
 }
 
 nav .logo {
   font-family: "Cinzel";
   width: 100%;
+  color: #fff;
 }
 nav .logo .logo-sm {
   line-height: 0.6;
@@ -79,6 +113,13 @@ nav .logo .logo-lg .logo-lg-lg {
   }
 }
 
+ul.tabs li.tab a:link, ul.tabs li.tab a:hover, ul.tabs li.tab a:visited {
+  color: #fff;
+}
+ul.tabs .indicator {
+  background: #fff;
+}
+
 .hero-actions {
   margin-top: 1rem;
 }
@@ -95,11 +136,6 @@ nav .logo .logo-lg .logo-lg-lg {
   color: #fff;
   max-width: 100%;
   padding: 1rem 24px;
-}
-
-section.container {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
 }
 
 .card .card-content > p {
@@ -122,6 +158,61 @@ section.container {
 }
 .item-avatar span.title {
   font-size: 1.25em;
+}
+
+.tab-content {
+  margin-top: 3rem;
+}
+
+article .article-title {
+  font-family: "EBG12", "Fanwood", serif;
+  font-style: italic;
+  border-bottom: 1px solid #4f4f4f;
+}
+article .article-title .title-btn {
+  float: right;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (min-width: 993px) {
+  article .article-content {
+    margin-left: 2rem;
+  }
+}
+
+ul.link-list .collection-item {
+  display: block;
+  padding: 1rem 0;
+}
+ul.link-list .collection-item span.title {
+  color: #000;
+  font-family: "EBG12", "Fanwood", serif;
+  font-size: 1.5em;
+  display: inline;
+  width: 100%;
+  border-bottom: 1px dotted #3f3f3f;
+}
+ul.link-list .collection-item .desc {
+  margin-left: 2em;
+  color: rgba(0, 0, 0, 0.71);
+  line-height: 1.3;
+}
+
+ul.avatar-list .collection-item {
+  margin: 2rem 0;
+}
+ul.avatar-list .collection-item img {
+  width: 3rem;
+  float: left;
+}
+ul.avatar-list .collection-item .item-content {
+  margin-left: 4rem;
+}
+ul.avatar-list .collection-item .item-content .title {
+  font-family: "EBG12", "Fanwood", serif;
+  font-size: 1.5em;
 }
 
 ul.card-collection {
@@ -161,11 +252,10 @@ footer .heart-icon {
 footer a, footer a:link, footer a:hover, footer a:visited {
   color: #0D47A1;
 }
-
 </style>
 </head>
 <body>
-  <nav class="white nav-extended">
+  <nav class="grey darken-3 nav-extended">
     <div class="nav-content">
      <div class="container">
        <div class="hero">
@@ -179,50 +269,99 @@ footer a, footer a:link, footer a:hover, footer a:visited {
            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfopzoUSTPUFSn70obOiRIHjxKUVa82jyM7mSGwRBkoZCdUCA/viewform" class="waves-effect waves-light btn light-blue">
               Join Us
            </a>
-           <a href="https://www.facebook.com/Unimelb-Competitive-Programming-Club-1496977563669222/" class="waves-effect waves-light btn blue darken-4 btn-square">
-             <i class="mdi mdi-facebook-box"></i>
+           <a href="https://www.facebook.com/groups/583907605108220" class="waves-effect waves-light btn blue darken-4 btn-square">
+             <i class="mdi mdi-facebook-box"></i><span class="button-label hide">Facebook</span>
            </a>
            <a href="https://calendar.google.com/calendar/embed?src=1a23.com_k7uscbkks41k1qhtc3pd8dilbs%40group.calendar.google.com&ctz=Australia/Sydney" class="waves-effect waves-light btn orange btn-square darken-4">
-             <i class="mdi mdi-calendar"></i>
+             <i class="mdi mdi-calendar"></i><span class="button-label hide">Calendar</span>
            </a>
-           <a href="https://www.facebook.com/groups/583907605108220" class="waves-effect waves-dark btn btn-square btn-flat">
-             <i class="mdi mdi-facebook"></i> <i class="mdi mdi-account-multiple" style=" position: absolute; top: 0.5em; font-size: 1em; right: 0.6em; text-shadow: -2px -2px 0 #fff;"></i>
+           <a href="https://www.facebook.com/groups/583907605108220" class="waves-effect waves-dark white-text btn btn-square btn-flat">
+             <i class="mdi mdi-facebook"></i> <i class="mdi mdi-account-multiple" style=" position: absolute; top: 0.5em; font-size: 1em; left: 1.7em; text-shadow: -2px -2px 0 #424242;"></i>
+             <span class="button-label hide">FB Group</span>
            </a>
-           <a href="https://t.me/umcpc" class="waves-effect waves-dark btn btn-square btn-flat">
-             <i class="mdi mdi-telegram"></i>
+           <a href="https://t.me/umcpc" class="waves-effect waves-dark btn white-text btn-square btn-flat">
+             <i class="mdi mdi-telegram"></i><span class="button-label hide">Telegram</span>
            </a>
-           <a href="https://wiki.umcpc.org" class="waves-effect waves-dark btn btn-square btn-flat">
-             <i class="mdi mdi-book-open-page-variant"></i>
+           <a href="https://wiki.umcpc.org" class="waves-effect waves-dark btn white-text btn-square btn-flat">
+             <i class="mdi mdi-book-open-page-variant"></i><span class="button-label hide-on-med-and-down">Wiki</span>
            </a>
-           <a href="https://domjudge.umcpc.org" class="waves-effect waves-dark btn btn-square btn-flat">
+           <a href="https://domjudge.umcpc.org" class="waves-effect waves-dark white-text btn btn-square btn-flat">
              <span style="font-family: Tahoma;font-weight: bold;letter-spacing: -1px;">D</span><span style="text-transform: initial;font-weight: bold;font-style: italic;font-family: &quot;Tahoma&quot;;font-size: 0.8em;vertical-align: -1px;">j</span>
+             <span class="button-label hide-on-med-and-down">Domjudge</span>
            </a>
          </div>
        </div>
+
      </div>
+    </div>
+    <div class="container">
+      <ul class="tabs transparent white-text">
+          <li class="tab col s3"><a class="active" href="#tab_home">Highlights</a></li>
+          <li class="tab col s3"><a class="" href="#tab_resources">Resources</a></li>
+          <li class="tab col s3"><a class="" href="#tab_about_us">About Us</a></li>
+          <li class="tab col s3"><a class="" href="#tab_committee">Committee</a></li>
+       </ul>
     </div>
   </nav>
 
-  <section class="container" id="schedule">
-    <div class="card">
-      <div class="card-heading teal card-title">
+  <section id="tab_home" class="tab-content container">
+    <article>
+      <h2 class="article-title">
+        <a href="https://calendar.google.com/calendar/ical/1a23.com_k7uscbkks41k1qhtc3pd8dilbs%40group.calendar.google.com/public/basic.ics" class="title-btn btn-flat waves-effect">Import ICAL</a>
         Schedule
-      </div>
-      <iframe src="https://calendar.google.com/calendar/embed?showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=1a23.com_k7uscbkks41k1qhtc3pd8dilbs%40group.calendar.google.com&amp;color=%23853104&amp;ctz=Australia%2FSydney"
+      </h2>
+        <iframe src="https://calendar.google.com/calendar/embed?showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=1a23.com_k7uscbkks41k1qhtc3pd8dilbs%40group.calendar.google.com&amp;color=%23853104&amp;ctz=Australia%2FSydney"
         style="border-width:0; width: 100%; height: 75vh; min-height: 500px;" class="card-content" frameborder="0" scrolling="no"></iframe>
-      <div class="card-action">
-        <a href="https://calendar.google.com/calendar/ical/1a23.com_k7uscbkks41k1qhtc3pd8dilbs%40group.calendar.google.com/public/basic.ics">Import ICAL</a>
-      </div>
-    </div>
-
+    </article>
   </section>
 
-  <section class="container">
-    <div class="card">
-      <div class="card-heading blue-grey card-title">
-        What We Do
+
+  <section id="tab_resources" class="tab-content container">
+    <article>
+      <h2 class="article-title">Resources</h2>
+      <div class="article-content">
+        <ul class="link-list">
+        <a href="https://icpc.baylor.edu/regionals/rules/EligibilityDecisionTree-2014.pdf" class="collection-item waves-effect">
+            <span class="title">ICPC Eligibility Decision Tree</span>
+            <div class="desc">Check your eligibility for the ICPC here (NOTE: this is out of date but the rules should be similar)</div>
+        </a>
+        <a href="http://codeforces.com/" class="collection-item waves-effect">
+          <span class="title">Codeforce</span>
+          <div class="desc">The place to be if you're a programmer and want to get right into it.</div>
+        </a>
+        <a href="https://uva.onlinejudge.org/" class="collection-item waves-effect">
+          <span class="title">UVA Online Judge</span>
+          <div class="desc">A massive library of practice questions</div>
+        </a>
+        <a href="http://uhunt.felix-halim.net/" class="collection-item waves-effect">
+          <span class="title">UHunt</span>
+          <div class="desc">Tracks your UVA statistics</div>
+        </a>
+        <a href="http://dbest.ca/icpc/monash-stats.html" class="collection-item waves-effect">
+          <span class="title">Beginnners' problems set</span>
+          <div class="desc">Ten easy problems as recommended by Monash (bottom of the page)</div>
+        </a>
+        <a href="https://visualgo.net/" class="collection-item waves-effect">
+          <span class="title">VISUALGO</span>
+          <div class="desc">Great for learning algorithms</div>
+        </a>
+        <a href="http://www.tutorialspoint.com/cplusplus/" class="collection-item waves-effect">
+          <span class="title">Tutorial Point C++</span>
+          <div class="desc">C++ is the ideal competition language, learn it here</div>
+        </a>
+        <a href="http://www.lulu.com/shop/steven-halim/competitive-programming-3/paperback/product-21059906.html" class="collection-item waves-effect">
+          <span class="title">Competitive Programming 3 by Halim</span>
+          <div class="desc">Our perscribed holy text (paperback is way better)</div>
+        </a>
+      </ul>
       </div>
-      <div class="card-content">
+    </article>
+  </section>
+
+  <section class="container tab-content" id="tab_about_us">
+    <article>
+      <h2 class="article-title">What We Do</h2>
+      <div class="article-content">
         <p>
           This club aims to organise the University of Melbourne's competitive programming endeavours in order to create results that an institution of this calibre deserves. Simultaneously it is an attempt to create a tight-knit community of science-loving students who can experience together what college life has to offer.
         </p>
@@ -234,85 +373,130 @@ footer a, footer a:link, footer a:hover, footer a:visited {
         <p>Above all other competitions, the International Collegiate Programming Contest (ICPC) will be the focus of this club's activities. The ICPC has three rounds, a divisional, regional and world championship. Divisionals have an open entry policy, but only the top teams will progress to regionals. Regionals is hosted across Australia and New Zealand, and luckily that landed us (Team O L D B O Y S) a trip to Auckland in 2015. Those who work hard enough can acquire a ticket overseas if they conquer the regional finals and enter the world championship. The typical ICPC round will require approximately twelve questions to be answered within five hours by teams of three. Don't expect to answer anywhere near twelve questions though. More information will be provided at meetings, and if you're unable to attend just message an admin over the facebook group or email us (details in the Contact Us just down the page).</p>
 
         <p>Everyone is welcome to join. All you need is an insatiable thirst for knowledge!</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="container">
-    <div class="card">
-      <div class="card-heading card-title light-blue darken-4">About Us</div>
-      <div class="card-content">
+      </div>
+    </article>
+
+    <article>
+      <h2 class="article-title">About Us</h2>
+      <div class="article-content">
         <p>HUGE shoutout to the Monash competitive programming community for helping us get this far, we love you.</p>
         <p>The conception of this club was what seemed like an afterthought Jonathan mumbled during the quiet flight over the Tasman Sea. We had just been overwhelmed at the regional ICPC competition in Auckland, our string of flukes slowly chewed through by five suffocating hours of failure. After welcoming the suggestion however, it became clear that it was far more than just a passing thought of his, my teammate was determined to establish a competitive programming club in our university. The first step was to enlist the aid of his comrades in coding.</p>
         <p>Having shared in the lows of defeat and the highs of travel together we felt closer to each other than ever before. The sneaker-tearing climb across a dormant volcano, our fearful venture into a shady youth hostel (which was a wonderful place come sunrise), the oversized drinks at Wendy's, my futile attempts to find a fish and chips store, carefully avoiding cow pies in order to eat canned food at the summit of a remote country campsite while witnessing a breathtaking sunset, and of course sharing an intimately small tent for the night. All our experiences will forever be some of my dearest memories. During the elation brought by our companionship we eagerly accepted the proposition, dreaming also of success in the following years championship. Bearing an enormous ego, I joined with the condition of trading presidential status for team-captaincy, Jonathan preferring the latter. After landing however, the difficulties that lay ahead became clear and Daniel decided to part ways with the team. So here we are, naturally behind schedule, hoping that this story has a happy ending.</p>
         <div class="item-avatar">
           <img src="https://images.1a23.com/di/GKNO/942859_10205459329950816_5805854080433941919_n.jpg" alt="Rami Ali" class="circle">
           <span class="title">Rami Ali</span>
-          <p>President of UMCPC</p>
+          <div>Founder of UMCPC</div>
         </div>
       </div>
-    </div>
+    </article>
   </section>
 
-  <section class="container">
-    <div class="card">
-      <div class="card-heading card-title green">Resources</div>
-       <ul class="card-collection collection">
-        <a href="http://codeforces.com/" class="collection-item wave-effect">
-          <span class="title">Codeforce</span>
-          <div class="desc">The place to be if you're a programmer and want to get right into it.</div>
-        </a>
-        <a href="https://uva.onlinejudge.org/" class="collection-item wave-effect">
-          <span class="title">UVA Online Judge</span>
-          <div class="desc">A massive library of practice questions</div>
-        </a>
-        <a href="http://uhunt.felix-halim.net/" class="collection-item wave-effect">
-          <span class="title">UHunt</span>
-          <div class="desc">Tracks your UVA statistics</div>
-        </a>
-        <a href="http://dbest.ca/icpc/monash-stats.html" class="collection-item wave-effect">
-          <span class="title">Beginnners' problems set</span>
-          <div class="desc">Ten easy problems as recommended by Monash (bottom of the page)</div>
-        </a>
-        <a href="https://visualgo.net/" class="collection-item wave-effect">
-          <span class="title">VISUALGO</span>
-          <div class="desc">Great for learning algorithms</div>
-        </a>
-        <a href="http://www.tutorialspoint.com/cplusplus/" class="collection-item wave-effect">
-          <span class="title">Tutorial Point C++</span>
-          <div class="desc">C++ is the ideal competition language, learn it here</div>
-        </a>
-        <a href="http://www.lulu.com/shop/steven-halim/competitive-programming-3/paperback/product-21059906.html" class="collection-item wave-effect">
-          <span class="title">Competitive Programming 3 by Halim</span>
-          <div class="desc">Our perscribed holy text (paperback is way better)</div>
-        </a>
+
+  <section class="container tab-content" id="tab_committee">
+    <article>
+      <h2 class="article-title">Contact Us</h2>
+      <div class="article-content">Email <a href="mailto:umcpc@apps.1a23.com">UMCPC @ Apps.1A23.com</a>.</div>
+    </article>
+    <article>
+      <h2 class="article-title">
+        2017 Committee
+      </h2>
+      <div class="article-content">
+        <ul class="avatar-list">
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/V5D3/logo4-03_white_circle.png" alt="Eana Hufwe" class="circle">
+          <div class="item-content">
+            <span class="title">Eana Hufwe</span>
+          <div>
+            Club President
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/RBHS/14481980_948588215269892_6549381176453796791_o.jpg" alt="Zijun Chen" class="circle">
+          <div class="item-content">
+            <span class="title">Zijun Chen</span>
+          <div>
+            Vice President
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/Q8X0/10606340_10204712658522119_3620263271774303778_n.jpg" alt="Tuck Leong Ngun" class="circle">
+          <div class="item-content">
+            <span class="title">Tuck Leong Ngun</span>
+          <div>
+            Secretary
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/I3B1/12111930_10204695641344788_3498226237554462518_n.jpg" alt="Shi Chang Zhang" class="circle">
+          <div class="item-content">
+            <span class="title">Shi Chang Zhang</span>
+          <div>
+            Treasurer
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/LYG2/16422968_10155468430662080_8874495985752037547_o.jpg" alt="Chon On Lok" class="circle">
+          <div class="item-content">
+            <span class="title">Chon On Lok</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/P97Q/11701061_10207306086796359_2829448615046777788_n.jpg" alt="Chung Man Lam" class="circle">
+          <div class="item-content">
+            <span class="title">Chung Man Lam</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/J2Q0/11146457_437609376416795_5078681385986451881_o.jpg" alt="Tianlei Zheng" class="circle">
+          <div class="item-content">
+            <span class="title">Tianlei Zheng</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
       </ul>
-    </div>
-  </section>
-
-
-  <section class="container">
-    <div class="card">
-      <div class="card-heading card-title purple">Contact Us</div>
-      <ul class="card-collection collection">
-        <ul class="collection-item avatar">
+      </div>
+    </article>
+    <article>
+      <h2 class="article-title">
+        2016 Committee
+      </h2>
+      <div class="article-content">
+        <ul class="avatar-list">
+        <li class="collection-item avatar">
           <img src="https://images.1a23.com/di/GKNO/942859_10205459329950816_5805854080433941919_n.jpg" alt="Rami Ali" class="circle">
-          <span class="title">Rami Ali</span>
-          <p>
-            Club President<br>Member of Team O L D B O Y S
-          </p>
-          <a href="mailto:ramia@student.unimelb.edu.au" class="secondary-content"><i class="mdi mdi-email"></i></a>
-        </ul>
-        <ul class="collection-item avatar">
-          <img src="https://images.1a23.com/di/2F9M/10301124_10201992077185139_6552015465742429663_n.jpg" alt="Rami Ali" class="circle">
-          <span class="title">Jonathan Milford</span>
-          <p>
-            Club Vice President<br>Team Captain of O L D B O Y S
-          </p>
-          <a href="mailto:milfordj@student.unimelb.edu.au" class="secondary-content"><i class="mdi mdi-email"></i></a>
-        </ul>
+          <div class="item-content">
+            <span class="title">Rami Ali</span>
+          <div>
+            President<br>Member of Team O L D B O Y S
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/2F9M/10301124_10201992077185139_6552015465742429663_n.jpg" alt="Jonathan Milford" class="circle">
+          <div class="item-content">
+            <span class="title">Jonathan Milford</span>
+          <div>
+            Vice President<br>Team Captain of O L D B O Y S
+          </div>
+          </div>
+        </li>
       </ul>
-    </div>
+      </div>
+    </article>
   </section>
 
   <footer>
@@ -320,35 +504,35 @@ footer a, footer a:link, footer a:hover, footer a:visited {
     by <a href="https://1a23.com"><img src="https://1a23.com/eanois_themes/default/images/logo4long.svg" alt="1A23 Studio"/></a>
     with <span class="heart-icon"><i class="mdi mdi-heart"></i></span>
     and <a href="http://materializecss.com/">Materialize</a>.
+
     <!-- For enquiries: https://t.me/blueset -->
   </footer>
-
-<script>
+<script id="jsbin-javascript">
     $(function(){
         $.ajax({url:"https://wiki.umcpc.org/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=UMCPC:Link&origin=" + location.origin + "&*",xhrFields:{withCredentials: true}}).done(function(a){
             var ydata = a.query.pages[Object.keys(a.query.pages)[0]].revisions[0]['*'];
             var links = jsyaml.load(ydata).home;
             if (links && links.length){
-                var list = $("<ul></ul>").addClass("card-collection collection");
+                var list = $("<ul></ul>").addClass("link-list");
                 links.forEach(function(i){
-                    list.append($("<a></a>").addClass("collection-item wave-effect").attr("href", i.link)
+                    list.append($("<a></a>").addClass("collection-item waves-effect").attr("href", i.link)
                                             .append($("<span></span>").addClass("title").text(i.name))
                                             .append($("<div></div>").addClass("desc").text(i.desc)));
                 });
-                $("section.container").first().before(
-                    $("<section></section>").addClass("container").append(
-                        $("<div></div>").addClass("card")
+                $("#tab_home article").first().before(
+                    $("<article></article>")
                         .append(
-                            $("<a></a>").addClass("card-heading card-title red").text("On-going").attr("href", "https://link.umcpc.org")
+                            $("<h2></.hw>").addClass("article-title").append($("<a></a>").text("On-going").attr("href", "https://link.umcpc.org").addClass("orange-text text-darken-4"))
                         )
                         .append(
-                            list
+                            $("<div></div>").addClass("article-content").append(list)
                         )
-                    )
+
                 );
             }
         });
     });
+
 
 </script>
 </body>
