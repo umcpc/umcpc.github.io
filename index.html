@@ -509,6 +509,30 @@ footer a, footer a:link, footer a:hover, footer a:visited {
   </footer>
 <script id="jsbin-javascript">
     $(function(){
+        $.ajax({url:"https://wiki.umcpc.org/api.php?action=query&format=json&rcnamespace=0&list=recentchanges&rcprop=title%7Cparsedcomment&rclimit=3&rctype=new&origin=" + location.origin + "&*",xhrFields:{withCredentials: true}}).done(function(a){
+            var links = a.query.recentchanges;
+            if (links && links.length){
+                var list = $("<ul></ul>").addClass("link-list");
+                links.forEach(function(i){
+                    list.append($("<a></a>").addClass("collection-item waves-effect").attr("href", "https://wiki.umcpc.org/" + encodeURIComponent(i.title))
+                                            .append($("<span></span>").addClass("title").text(i.title))
+                                            .append($("<div></div>").addClass("desc").html(i.parsedcomment)));
+                });
+                $("#tab_home article").first().before(
+                    $("<article></article>")
+                        .append(
+                            $("<h2></h2>").addClass("article-title").append($("<a></a>")
+                                .append($("<a></a>").attr("href", "https://wiki.umcpc.org").addClass("title-btn btn-flat waves-effect hide-on-med-and-down").text("UMCPC Wiki"))
+                                .append("Wiki Updates")
+                                .attr("href", "https://wiki.umcpc.org").addClass("black-text"))
+                        )
+                        .append(
+                            $("<div></div>").addClass("article-content").append(list)
+                        )
+
+                );
+            }
+        });
         $.ajax({url:"https://wiki.umcpc.org/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=UMCPC:Link&origin=" + location.origin + "&*",xhrFields:{withCredentials: true}}).done(function(a){
             var ydata = a.query.pages[Object.keys(a.query.pages)[0]].revisions[0]['*'];
             var links = jsyaml.load(ydata).home;
