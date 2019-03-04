@@ -16,9 +16,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.8.2/js-yaml.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Cinzel|Fanwood+Text:400,400i|Roboto:400,400i,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Cinzel|Fanwood+Text:100,300,400,400i|Open+Sans:400,400i|Roboto:400,400i,600" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
 <style id="jsbin-css">
+
 @font-face {
   font-family: "EBG12";
   src: url("https://fontlibrary.org/assets/fonts/eb-garamond/ad76a14ea9b136557b474c3445caea08/0ec1814f1bd8fab729cdcfd58e5d115f/EBGaramond12Italic.ttf") format("truetype");
@@ -31,6 +32,7 @@
   font-style: normal;
 }
 html, body {
+  font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: 0;
   background: #fff;
@@ -46,6 +48,10 @@ nav {
 
 nav .logo, nav .nav-content {
   color: #444;
+}
+
+.btn, .tab {
+  font-family: Roboto, sans-serif;
 }
 
 .btn-square {
@@ -165,8 +171,8 @@ ul.tabs .indicator {
 }
 
 article .article-title {
-  font-family: "EBG12", "Fanwood", serif;
-  font-style: italic;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
   border-bottom: 1px solid #4f4f4f;
 }
 article .article-title .title-btn {
@@ -188,10 +194,10 @@ ul.link-list .collection-item {
 }
 ul.link-list .collection-item span.title {
   color: #000;
-  font-family: "EBG12", "Fanwood", serif;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
   font-size: 1.5em;
   display: inline;
-  width: 100%;
   border-bottom: 1px dotted #3f3f3f;
 }
 ul.link-list .collection-item .desc {
@@ -211,7 +217,7 @@ ul.avatar-list .collection-item .item-content {
   margin-left: 4rem;
 }
 ul.avatar-list .collection-item .item-content .title {
-  font-family: "EBG12", "Fanwood", serif;
+  font-family: Roboto, sans-serif;
   font-size: 1.5em;
 }
 
@@ -270,8 +276,8 @@ footer a, footer a:link, footer a:hover, footer a:visited {
               Join Us
            </a> -->
            <a href="https://www.facebook.com/groups/583907605108220" class="waves-effect waves-dark white-text btn btn-square btn blue darken-4">
-               <i class="mdi mdi-facebook"></i> <i class="mdi mdi-account-multiple" style=" position: absolute; top: 0.5em; font-size: 1em; left: 1.7em; text-shadow: -2px -2px 0 #424242;"></i>
-               <span class="button-label hide">FB Group</span>
+               <i class="mdi mdi-facebook" style="margin-right: 0.5em;"></i> <i class="mdi mdi-account-multiple" style="position: absolute; top: 0.5em; font-size: 1em; left: 1.7em; text-shadow: -2px -2px 0 #424242;"></i>
+               FB Group
            </a>
            <a href="https://calendar.google.com/calendar/embed?src=1a23.com_k7uscbkks41k1qhtc3pd8dilbs%40group.calendar.google.com&ctz=Australia/Sydney" class="waves-effect waves-light btn orange btn-square darken-4">
              <i class="mdi mdi-calendar"></i><span class="button-label hide">Calendar</span>
