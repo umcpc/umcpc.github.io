@@ -13,7 +13,5 @@ jobs:
         run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
       - name: Build the Docker image
         run: docker build -t umcpcweb:latest .
-      - name: Tag the Docker image
-        run: docker tag umcpcweb:latest umcpcweb:1.0
       - name: Push the Docker image to the registry
-        run: docker push umcpcweb:1.0
+        run: docker push umcpcweb:latest
