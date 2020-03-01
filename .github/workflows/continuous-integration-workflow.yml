@@ -10,9 +10,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Publish Image
-        uses: matootie/github-docker@v2.0.0
-        with:
-          accessToken: ${{ secrets.GITHUB_TOKEN }}
-      - name: Echo Complete
-        run: echo 'workflow complete'
-    
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      - name: Build the Docker image
+        run: docker build -t umcpcweb:latest .
+      - name: Tag the Docker image
+        run: docker tag myimage:latest umcpcweb:1.0
+      - name: Push the Docker image to the registry
+        run: docker push umcpcweb:1.0
