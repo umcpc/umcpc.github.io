@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139399149-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-139399149-1');
+  </script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>UMCPC: University of Melbourne Competitive Programming Club</title>
+  <meta name="description" content="Learn Algorithms by Competing. University of Melbourne Competitive Programming Club (UMCPC).">
+  <meta property="og:title" content="UMCPC: University of Melbourne Competitive Programming Club"/>
+  <meta property="og:description" content="Learn Algorithms by Competing. University of Melbourne Competitive Programming Club (UMCPC).">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://umcpc.org/">
+  <meta property="og:image" content="https://umcpc.org/images/logo.png">
+  <link rel="canonical" href="https://umcpc.org/">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.8.2/js-yaml.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Cinzel|Fanwood+Text:100,300,400,400i|Open+Sans:400,400i|Roboto:400,400i,600" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.8.36/css/materialdesignicons.min.css">
+<style id="jsbin-css">
+
+@font-face {
+  font-family: "EBG12";
+  src: url("https://fontlibrary.org/assets/fonts/eb-garamond/ad76a14ea9b136557b474c3445caea08/0ec1814f1bd8fab729cdcfd58e5d115f/EBGaramond12Italic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: 'EBG12';
+  src: url("https://fontlibrary.org/assets/fonts/eb-garamond/ad76a14ea9b136557b474c3445caea08/a8006b37472df2e365d439d4ec1f48bf/EBGaramond12Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+}
+
+p {
+  font-size: 16px;
+}
+
+nav {
+  padding: 1px 0;
+}
+
+nav .logo, nav .nav-content {
+  color: #444;
+}
+
+.btn, .tab {
+  font-family: Roboto, sans-serif;
+}
+
+.btn-square {
+  padding: 0 1rem;
+}
+
+.nav-header {
+  margin: 3rem auto;
+}
+
+.nav-content {
+  margin: 5rem 0 3rem 0;
+}
+
+i.mdi {
+  display: inline-block;
+}
+
+.button-label {
+  margin: 0.3rem 0 0.3rem 0.5rem;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: 0.15rem;
+}
+
+nav .nav-content .container {
+  color: #fff;
+}
+
+nav .logo {
+  font-family: "Cinzel";
+  width: 100%;
+  color: #fff;
+}
+nav .logo .logo-sm {
+  line-height: 0.6;
+  font-size: 2em;
+}
+nav .logo .logo-sm small {
+  width: 100%;
+  font-size: 0.5em;
+}
+nav .logo .logo-lg {
+  line-height: 1;
+}
+nav .logo .logo-lg .logo-lg-lg {
+  line-height: 1.0;
+}
+@media (max-width: 992px) {
+  nav .logo .logo-lg .logo-lg-sm {
+    font-size: 1.5rem;
+  }
+  nav .logo .logo-lg .logo-lg-lg {
+    font-size: 2.5rem;
+    max-width: 30rem;
+  }
+}
+@media (min-width: 993px) {
+  nav .logo .logo-lg .logo-lg-sm {
+    font-size: 2rem;
+  }
+  nav .logo .logo-lg .logo-lg-lg {
+    font-size: 4.5rem;
+    max-width: 54rem;
+  }
+}
+
+ul.tabs li.tab a:link, ul.tabs li.tab a:hover, ul.tabs li.tab a:visited {
+  color: #fff;
+}
+ul.tabs .indicator {
+  background: #fff;
+}
+
+.hero-actions {
+  margin-top: 1rem;
+}
+
+.card-heading {
+  display: block;
+  border-radius: 2px 2px 0 0;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  max-width: 100%;
+  padding: 1rem 24px;
+}
+
+.card .card-content > p {
+  margin: 1rem 0;
+}
+.card .card-content > p:first-child {
+  margin-top: 0;
+}
+.card .card-content > p:last-child {
+  margin-bottom: 0;
+}
+
+.item-avatar {
+  clear: both;
+}
+.item-avatar img.circle {
+  height: 3.25em;
+  float: left;
+  margin-right: 1rem;
+}
+.item-avatar span.title {
+  font-size: 1.25em;
+}
+
+.tab-content {
+  margin-top: 3rem;
+}
+
+article .article-title {
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  border-bottom: 1px solid #4f4f4f;
+}
+article .article-title .title-btn {
+  float: right;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+}
+@media (min-width: 993px) {
+  article .article-content {
+    margin-left: 2rem;
+  }
+}
+
+ul.link-list .collection-item {
+  display: block;
+  padding: 1rem 0;
+}
+ul.link-list .collection-item span.title {
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  display: inline;
+  border-bottom: 1px dotted #3f3f3f;
+}
+ul.link-list .collection-item .desc {
+  margin-left: 2em;
+  color: rgba(0, 0, 0, 0.71);
+  line-height: 1.3;
+}
+
+ul.avatar-list .collection-item {
+  margin: 2rem 0;
+}
+ul.avatar-list .collection-item img {
+  width: 3rem;
+  float: left;
+}
+ul.avatar-list .collection-item .item-content {
+  margin-left: 4rem;
+}
+ul.avatar-list .collection-item .item-content .title {
+  font-family: Roboto, sans-serif;
+  font-size: 1.5em;
+}
+
+ul.card-collection {
+  margin: 0;
+}
+ul.card-collection .collection-item {
+  padding: 20px;
+}
+ul.card-collection .collection-item span.title {
+  color: #000;
+  font-size: 1.25em;
+  display: block;
+  width: 100%;
+}
+ul.card-collection .collection-item .desc {
+  color: rgba(0, 0, 0, 0.71);
+  line-height: 1.3;
+}
+
+.secondary-content i {
+  font-size: 1.5em;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+  opacity: 0.6;
+  margin: 3em 0;
+}
+footer img {
+  height: 1rem;
+  vertical-align: -1px;
+}
+footer .heart-icon {
+  color: #EF5350;
+}
+footer a, footer a:link, footer a:hover, footer a:visited {
+  color: #0D47A1;
+}
+</style>
+</head>
+<body>
+  <nav class="grey darken-3 nav-extended">
+    <div class="nav-content">
+     <div class="container">
+       <div class="hero">
+         <div class="logo">
+           <div class="logo-lg">
+             <div class="logo-lg-sm">University of Melbourne</div>
+             <div class="logo-lg-lg">Competitive Programming Club</div>
+           </div>
+         </div>
+         <div class="hero-actions">
+<!--            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfopzoUSTPUFSn70obOiRIHjxKUVa82jyM7mSGwRBkoZCdUCA/viewform" class="waves-effect waves-light btn light-blue">
+              Join Us
+           </a> -->
+           <a href="https://www.facebook.com/groups/583907605108220" class="waves-effect waves-dark white-text btn btn-square btn blue darken-4">
+               <i class="mdi mdi-facebook" style="margin-right: 0.5em;"></i> <i class="mdi mdi-account-multiple" style="position: absolute; top: 0.5em; font-size: 1em; left: 1.7em; text-shadow: -2px -2px 0 #424242;"></i>
+               FB Group
+           </a>
+           <a href="https://calendar.google.com/calendar/b/4?cid=aTVnaWd0OWNnbTJkaG01N2hqMHZxbnIxbmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ" class="waves-effect waves-light btn orange btn-square darken-4">
+             <i class="mdi mdi-calendar"></i><span class="button-label hide">Calendar</span>
+           </a>
+           <a href="https://www.facebook.com/umcpc" class="waves-effect waves-light btn-flat white-text btn-square">
+               <i class="mdi mdi-facebook-box"></i><span class="button-label hide">Facebook</span>
+           </a>
+           <!-- <a href="https://t.me/umcpc" class="waves-effect waves-dark btn white-text btn-square btn-flat">
+             <i class="mdi mdi-telegram"></i><span class="button-label hide">Telegram</span>
+           </a> -->
+           <a href="https://wiki.umcpc.org" class="waves-effect waves-dark btn white-text btn-square btn-flat">
+             <i class="mdi mdi-book-open-page-variant"></i><span class="button-label hide-on-med-and-down">Wiki</span>
+           </a>
+           <a href="https://domjudge.umcpc.org" class="waves-effect waves-dark white-text btn btn-square btn-flat">
+             <span style="font-family: Tahoma;font-weight: bold;letter-spacing: -1px;">D</span><span style="text-transform: initial;font-weight: bold;font-style: italic;font-family: &quot;Tahoma&quot;;font-size: 0.8em;vertical-align: -1px;">j</span>
+             <span class="button-label hide-on-med-and-down">Domjudge</span>
+           </a>
+         </div>
+       </div>
+
+     </div>
+    </div>
+    <div class="container">
+      <ul class="tabs transparent white-text">
+          <li class="tab col s3"><a class="active" href="#tab_home">News</a></li>
+<!--           <li class="tab col s3"><a class="" href="#tab_membership">Membership</a></li> -->
+          <li class="tab col s3"><a class="" href="#tab_resources">Resources</a></li>
+          <li class="tab col s3"><a class="" href="#tab_about_us">About Us</a></li>
+          <li class="tab col s3"><a class="" href="#tab_committee">Committee</a></li>
+       </ul>
+    </div>
+  </nav>
+
+  <section id="tab_home" class="tab-content container">
+    <article>
+      <h2 class="article-title">
+        <a href="https://calendar.google.com/calendar/ical/i5gigt9cgm2dhm57hj0vqnr1nc%40group.calendar.google.com/public/basic.ics" class="title-btn btn-flat waves-effect">Import ICAL</a>
+        Schedule
+      </h2>
+        <iframe src="https://calendar.google.com/calendar/b/4/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Australia%2FMelbourne&amp;src=aTVnaWd0OWNnbTJkaG01N2hqMHZxbnIxbmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23C0CA33&amp;showTz=1&amp;showCalendars=1&amp;showTabs=1&amp;showPrint=1&amp;showDate=1&amp;showNav=1&amp;showTitle=0&amp;mode=MONTH" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </article>
+  </section>
+
+<!--   <section id="tab_membership" class="tab-content container">
+    <article>
+      <h2 class="article-title">
+        Join us for free
+      </h2>
+        <iframe id="signup" name="signup" src="https://docs.google.com/a/1a23.com/forms/d/e/1FAIpQLSfopzoUSTPUFSn70obOiRIHjxKUVa82jyM7mSGwRBkoZCdUCA/viewform"
+        style="border-width:0; width: 100%; height: 100vh;" class="card-content" frameborder="0" scrolling="yes"></iframe>
+    </article>
+  </section> -->
+
+  <section id="tab_resources" class="tab-content container">
+    <article>
+      <h2 class="article-title">Resources</h2>
+      <div class="article-content">
+        <ul class="link-list">
+        <a href="https://icpc.baylor.edu/regionals/rules/EligibilityDecisionTree-2017.pdf" class="collection-item waves-effect">
+            <span class="title">ICPC Eligibility Decision Tree (2017)</span>
+            <div class="desc">Check your eligibility for the ICPC here</div>
+        </a>
+        <a href="http://codeforces.com/" class="collection-item waves-effect">
+          <span class="title">Codeforces</span>
+          <div class="desc">The place to be if you're a programmer and want to get right into it.</div>
+        </a>
+        <a href="https://uva.onlinejudge.org/" class="collection-item waves-effect">
+          <span class="title">UVA Online Judge</span>
+          <div class="desc">A massive library of practice questions</div>
+        </a>
+        <a href="http://uhunt.felix-halim.net/" class="collection-item waves-effect">
+          <span class="title">UHunt</span>
+          <div class="desc">Tracks your UVA statistics</div>
+        </a>
+        <a href="https://visualgo.net/" class="collection-item waves-effect">
+          <span class="title">VISUALGO</span>
+          <div class="desc">Great for learning algorithms</div>
+        </a>
+        <a href="http://www.tutorialspoint.com/cplusplus/" class="collection-item waves-effect">
+          <span class="title">Tutorial Point C++</span>
+          <div class="desc">C++ is the ideal competition language, learn it here</div>
+        </a>
+        <a href="http://www.lulu.com/shop/steven-halim/competitive-programming-3/paperback/product-21059906.html" class="collection-item waves-effect">
+          <span class="title">Competitive Programming 3 by Halim</span>
+          <div class="desc">Our perscribed holy text (paperback is way better)</div>
+        </a>
+      </ul>
+      </div>
+    </article>
+  </section>
+
+  <section class="container tab-content" id="tab_about_us">
+    <article>
+      <h2 class="article-title">What We Do</h2>
+      <div class="article-content">
+        <p>
+          This club aims to organise the University of Melbourne's competitive programming endeavours in order to create results that an institution of this calibre deserves. Simultaneously it is an attempt to create a tight-knit community of science-loving students who can experience together what college life has to offer.
+        </p>
+
+        <p>
+          The programming competitions that this club participates in are those that involve being given a set of difficult questions which must be solved through the submission of computer code. The problems vary in topic wildly, but the answer usually involves the use of mathematics or algorithms and is a program written in a language such as C++ or Java. While beginner problem sets may seem simple enough, prepare to spend days toiling away at a difficult question.
+        </p>
+
+        <p>Above all other competitions, the International Collegiate Programming Contest (ICPC) will be the focus of this club's activities. The ICPC has three rounds, a divisional, regional and world championship. Divisionals have an open entry policy, but only the top teams will progress to regionals. Regionals is hosted across Australia and New Zealand, and luckily that landed us (Team O L D B O Y S) a trip to Auckland in 2015. Those who work hard enough can acquire a ticket overseas if they conquer the regional finals and enter the world championship. The typical ICPC round will require approximately twelve questions to be answered within five hours by teams of three. Don't expect to answer anywhere near twelve questions though. More information will be provided at meetings, and if you're unable to attend just message an admin over the facebook group or email us (details in the Contact Us just down the page).</p>
+
+        <p>Everyone is welcome to join. All you need is an insatiable thirst for knowledge!</p>
+
+      </div>
+    </article>
+
+    <article>
+      <h2 class="article-title">About Us</h2>
+      <div class="article-content">
+        <p>HUGE shoutout to the Monash competitive programming community for helping us get this far, we love you.</p>
+        <p>The conception of this club was what seemed like an afterthought Jonathan mumbled during the quiet flight over the Tasman Sea. We had just been overwhelmed at the regional ICPC competition in Auckland, our string of flukes slowly chewed through by five suffocating hours of failure. After welcoming the suggestion however, it became clear that it was far more than just a passing thought of his, my teammate was determined to establish a competitive programming club in our university. The first step was to enlist the aid of his comrades in coding.</p>
+        <p>Having shared in the lows of defeat and the highs of travel together we felt closer to each other than ever before. The sneaker-tearing climb across a dormant volcano, our fearful venture into a shady youth hostel (which was a wonderful place come sunrise), the oversized drinks at Wendy's, my futile attempts to find a fish and chips store, carefully avoiding cow pies in order to eat canned food at the summit of a remote country campsite while witnessing a breathtaking sunset, and of course sharing an intimately small tent for the night. All our experiences will forever be some of my dearest memories. During the elation brought by our companionship we eagerly accepted the proposition, dreaming also of success in the following years championship. Bearing an enormous ego, I joined with the condition of trading presidential status for team-captaincy, Jonathan preferring the latter. After landing however, the difficulties that lay ahead became clear and Daniel decided to part ways with the team. So here we are, naturally behind schedule, hoping that this story has a happy ending.</p>
+        <div class="item-avatar">
+          <img src="https://images.1a23.com/di/GKNO/942859_10205459329950816_5805854080433941919_n.jpg" alt="Rami Ali" class="circle">
+          <span class="title">Rami Ali</span>
+          <div>Founder of UMCPC</div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+
+  <section class="container tab-content" id="tab_committee">
+    <article>
+      <h2 class="article-title">Contact Us</h2>
+      <div class="article-content">Email <a href="mailto:committee@umcpc.org">Committee @ UMCPC.org</a>.</div>
+    </article>
+     <article>
+      <h2 class="article-title">
+        2021 Committee
+      </h2>
+      <div class="article-content">
+      <ul class="avatar-list">
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/GXWZ/headshot_melb.jpg" alt="Rodrigo Naves" class="circle">
+          <div class="item-content">
+            <span class="title">Rodrigo Naves Vargas</span>
+            <div>
+              Club President
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Liam Saliba" class="circle">
+          <div class="item-content">
+            <span class="title">Bing Xu</span>
+            <div>
+              Vice President
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Ivan Moore" class="circle">
+          <div class="item-content">
+            <span class="title">Malaila Safdar</span>
+            <div>
+              Secretary
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Austen McClernon" class="circle">
+          <div class="item-content">
+            <span class="title">Brendan Ho</span>
+          <div>
+            Treasurer
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Liam Saliba" class="circle">
+          <div class="item-content">
+            <span class="title">James Lew</span>
+          <div>
+            Communications Officer
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Anand Bharadwaj" class="circle">
+          <div class="item-content">
+            <span class="title">Patrick Gibbs</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Isaac Aguirre" class="circle">
+          <div class="item-content">
+            <span class="title">Shuang Li</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Malaila Safdar" class="circle">
+          <div class="item-content">
+            <span class="title">Chuanyuan Liu</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </article>
+     <article>
+      <h2 class="article-title">
+        2020 Committee
+      </h2>
+      <div class="article-content">
+      <ul class="avatar-list">
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Austen McClernon" class="circle">
+          <div class="item-content">
+            <span class="title">Austen McClernon</span>
+            <div>
+              Club President
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Liam Saliba" class="circle">
+          <div class="item-content">
+            <span class="title">Liam Saliba</span>
+            <div>
+              Vice President
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Ivan Moore" class="circle">
+          <div class="item-content">
+            <span class="title">Josh Nguyen</span>
+            <div>
+              Secretary
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Austen McClernon" class="circle">
+          <div class="item-content">
+            <span class="title">Deveesh Shanmuganath</span>
+          <div>
+            Treasurer
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Liam Saliba" class="circle">
+          <div class="item-content">
+            <span class="title">Tracy Bu</span>
+          <div>
+            Communications Officer
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Anand Bharadwaj" class="circle">
+          <div class="item-content">
+            <span class="title">Anand Bharadwaj</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Isaac Aguirre" class="circle">
+          <div class="item-content">
+            <span class="title">Isaac Pedroza Aguirre</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Malaila Safdar" class="circle">
+          <div class="item-content">
+            <span class="title">Malaila Safdar</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </article>
+    <article>
+      <h2 class="article-title">
+        2019 Committee
+      </h2>
+      <div class="article-content">
+      <ul class="avatar-list">
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Marco Marasco" class="circle">
+          <div class="item-content">
+            <span class="title">Marco Marasco</span>
+            <div>
+              Club President
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Srijan Chaudhary" class="circle">
+          <div class="item-content">
+            <span class="title">Srijan Chaudhary</span>
+            <div>
+              Vice President
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Ivan Moore" class="circle">
+          <div class="item-content">
+            <span class="title">Ivan Moore</span>
+            <div>
+              Secretary
+            </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Austen McClernon" class="circle">
+          <div class="item-content">
+            <span class="title">Austen McClernon</span>
+          <div>
+            Treasurer
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Liam Saliba" class="circle">
+          <div class="item-content">
+            <span class="title">Liam Saliba</span>
+          <div>
+            Communications Officer
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Jack Zezula" class="circle">
+          <div class="item-content">
+            <span class="title">Jack Zezula</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Zijun Chen" class="circle">
+          <div class="item-content">
+            <span class="title">Zijun Chen</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Gloryce Huang" class="circle">
+          <div class="item-content">
+            <span class="title">Gloryce Huang</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </article>
+    <article>
+      <h2 class="article-title">
+        2018 Committee
+      </h2>
+      <div class="article-content">
+      <ul class="avatar-list">
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Malcolm Karutz" class="circle">
+          <div class="item-content">
+            <span class="title">Malcolm Karutz</span>
+          <div>
+            Club President
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Chuanyuan Liu" class="circle">
+          <div class="item-content">
+            <span class="title">Chuanyuan Liu</span>
+          <div>
+            Vice President
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Christian Gioia" class="circle">
+          <div class="item-content">
+            <span class="title">Christian Gioia</span>
+          <div>
+            Secretary
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://umcpc.org/images/umcpc-avatar.png" alt="Yi Zhong" class="circle">
+          <div class="item-content">
+            <span class="title">Yi Zhong</span>
+          <div>
+            Treasurer
+          </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </article>
+    <article>
+      <h2 class="article-title">
+        2017 Committee
+      </h2>
+      <div class="article-content">
+        <ul class="avatar-list">
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/V5D3/logo4-03_white_circle.png" alt="Eana Hufwe" class="circle">
+          <div class="item-content">
+            <span class="title">Eana Hufwe</span>
+          <div>
+            Club President
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/RBHS/14481980_948588215269892_6549381176453796791_o.jpg" alt="Zijun Chen" class="circle">
+          <div class="item-content">
+            <span class="title">Zijun Chen</span>
+          <div>
+            Vice President
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/Q8X0/10606340_10204712658522119_3620263271774303778_n.jpg" alt="Tuck Leong Ngun" class="circle">
+          <div class="item-content">
+            <span class="title">Tuck Leong Ngun</span>
+          <div>
+            Secretary
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/I3B1/12111930_10204695641344788_3498226237554462518_n.jpg" alt="Shi Chang Zhang" class="circle">
+          <div class="item-content">
+            <span class="title">Shi Chang Zhang</span>
+          <div>
+            Treasurer
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/LYG2/16422968_10155468430662080_8874495985752037547_o.jpg" alt="Chon On Lok" class="circle">
+          <div class="item-content">
+            <span class="title">Chon On Lok</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/P97Q/11701061_10207306086796359_2829448615046777788_n.jpg" alt="Chung Man Lam" class="circle">
+          <div class="item-content">
+            <span class="title">Chung Man Lam</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/J2Q0/11146457_437609376416795_5078681385986451881_o.jpg" alt="Tianlei Zheng" class="circle">
+          <div class="item-content">
+            <span class="title">Tianlei Zheng</span>
+          <div>
+            General Committee Member
+          </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </article>
+    <article>
+      <h2 class="article-title">
+        2016 Committee
+      </h2>
+      <div class="article-content">
+        <ul class="avatar-list">
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/GKNO/942859_10205459329950816_5805854080433941919_n.jpg" alt="Rami Ali" class="circle">
+          <div class="item-content">
+            <span class="title">Rami Ali</span>
+          <div>
+            President<br>Member of Team O L D B O Y S
+          </div>
+          </div>
+        </li>
+        <li class="collection-item avatar">
+          <img src="https://images.1a23.com/di/2F9M/10301124_10201992077185139_6552015465742429663_n.jpg" alt="Jonathan Milford" class="circle">
+          <div class="item-content">
+            <span class="title">Jonathan Milford</span>
+          <div>
+            Vice President<br>Team Captain of O L D B O Y S
+          </div>
+          </div>
+        </li>
+      </ul>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    Redesigned
+    by <a href="https://1a23.com"><img src="https://1a23.com/eanois_themes/default/images/logo4long.svg" alt="1A23 Studio"/></a>
+    with <span class="heart-icon"><i class="mdi mdi-heart"></i></span>
+    and <a href="http://materializecss.com/">Materialize</a>.
+
+    <!-- For enquiries: https://t.me/blueset -->
+  </footer>
+<script id="jsbin-javascript">
+    $(function(){
+        $.ajax({url:"https://wiki.umcpc.org/api.php?action=query&format=json&rcnamespace=0&list=recentchanges&rcprop=title%7Cparsedcomment&rclimit=3&rctype=new&origin=" + location.origin + "&*",xhrFields:{withCredentials: true}}).done(function(a){
+            var links = a.query.recentchanges;
+            if (links && links.length){
+                var list = $("<ul></ul>").addClass("link-list");
+                links.forEach(function(i){
+                    list.append($("<a></a>").addClass("collection-item waves-effect").attr("href", "https://wiki.umcpc.org/" + encodeURIComponent(i.title))
+                                            .append($("<span></span>").addClass("title").text(i.title))
+                                            .append($("<div></div>").addClass("desc").html(i.parsedcomment)));
+                });
+                $("#tab_home article").first().before(
+                    $("<article></article>")
+                        .append(
+                            $("<h2></h2>").addClass("article-title").append($("<a></a>")
+                                .append($("<a></a>").attr("href", "https://wiki.umcpc.org").addClass("title-btn btn-flat waves-effect hide-on-med-and-down").text("UMCPC Wiki"))
+                                .append("Wiki Updates")
+                                .attr("href", "https://wiki.umcpc.org").addClass("black-text"))
+                        )
+                        .append(
+                            $("<div></div>").addClass("article-content").append(list)
+                        )
+
+                );
+            }
+        });
+        $.ajax({url:"https://wiki.umcpc.org/api.php?action=query&prop=revisions&rvprop=content&format=json&titles=UMCPC:Link&origin=" + location.origin + "&*",xhrFields:{withCredentials: true}}).done(function(a){
+            var ydata = a.query.pages[Object.keys(a.query.pages)[0]].revisions[0]['*'];
+            var links = jsyaml.load(ydata).home;
+            if (links && links.length){
+                var list = $("<ul></ul>").addClass("link-list");
+                links.forEach(function(i){
+                    list.append($("<a></a>").addClass("collection-item waves-effect").attr("href", i.link)
+                                            .append($("<span></span>").addClass("title").text(i.name))
+                                            .append($("<div></div>").addClass("desc").text(i.desc)));
+                });
+                $("#tab_home article").first().before(
+                    $("<article></article>")
+                        .append(
+                            $("<h2></.hw>").addClass("article-title").append($("<a></a>").text("On-going").attr("href", "https://link.umcpc.org").addClass("orange-text text-darken-4"))
+                        )
+                        .append(
+                            $("<div></div>").addClass("article-content").append(list)
+                        )
+
+                );
+            }
+        });
+    });
+
+
+</script>
+</body>
+</html>
