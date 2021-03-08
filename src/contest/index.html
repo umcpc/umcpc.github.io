@@ -1,0 +1,201 @@
+<html>
+<head>
+ <title>UMCPC Programming Contests</title>
+
+<style>
+    * {
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    body {
+        padding: 1em;
+    }
+    .schedule th, .schedule td {
+        padding: 10px;
+    }
+
+    li {
+        line-height: 1.5em;
+    }
+
+    #main-link {
+        font-size: 1.5em;
+    }
+
+    #faq-list li {
+        margin-bottom: 1em;
+    }
+</style>
+
+ <script type="text/javascript"> 
+    function display_c(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_ct()',refresh)
+    }
+    
+    function display_ct() {
+        var x = new Date()
+        document.getElementById('ct').innerHTML 
+            = x.toLocaleString('en-US', { 
+                timeZone: 'Australia/Melbourne' 
+            });
+        display_c();
+    }
+    </script>
+</head>
+
+<body onload=display_ct()>
+
+<img src="banner.png" style="width: 100%; max-width:800px;">
+<h1>UoM Programming Championships Contest Page</h1>
+
+<p>
+    <b>Read all instructions carefully!</b> We will not answer any questions that are answered on the instructions.
+</p>
+<p>
+<a id="main-link", href="https://domjudge.umcpc.org">The official contest website (Domjudge) can be found here.</a>
+</p>
+
+<p>
+Use the login that was emailed to you on Sunday.  Check your spam folder.  
+</p>
+
+<b>If you have issues during the contest, the first point of contact is the clarifications on Domjudge.  We will not be closely monitoring discord for the duration of the contest.</b>
+ 
+<h3>Quick Links</h3>
+<ul>
+<li><a href="https://discord.gg/7vzMYS">Discord Discussion</a> 
+<li><a href="https://unimelb.zoom.us/j/91449465840?pwd=Vkx3Qld1d29DUlZiVXh6S3B6bDl2QT09">Zoom Meeting</a> (11:30-12:00 and 15:00-16:00) 
+<li><a href="#faq">FAQ</a> 
+<li><a href="#schedule-1">Schedule</a>
+<li><a href="#instructions">Instructions</a> 
+<li><a href="#rules">Rules</a> 
+<li><a href="#documentation">Documentation</a> 
+<li><a href="#limits">Limits</a> 
+<li><a href="#compile">Compilation Specifications</a> 
+</ul>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+Most recent on top.  Will be maintained through the contest.  We will also post these as announcements within #competitions on the <a href="https://discord.gg/gGx3P6y">discord</a>.
+<ol reversed id="faq-list">
+    <li><em>What order do I have to solve the problems in?</em>
+        <br> Any order you like.  Aim to solve problems as fast as possible.  </li>
+    <li><em>I can't find my login details.</em>
+        <br>It was sent to you on Sunday.  Check your spam folder.  Otherwise, send a message to @committee in the #help-login channel.</li>
+</ol>
+
+<h2></h2>
+
+<h2 id="schedule-1">Schedule</h2>
+<p>
+All times AEST.  Current time is <span id="ct">(loading)</span>.
+</p>
+
+<table class="schedule">
+<tr>
+<td>11:30AM - 11:55AM</td>
+<td>Welcome, Rules Recap, Submission Demo.<br>
+    <a href="https://domjudge.umcpc.org">Practice Competition</a> closes at 12:00PM.</td>
+<td><a href="https://unimelb.zoom.us/j/91449465840?pwd=Vkx3Qld1d29DUlZiVXh6S3B6bDl2QT09">Zoom Meeting Link</a></td>
+</tr>
+
+<tr>
+    <td>12:00PM - 03:00PM</td>
+    <td>Competition Time. <br>Scoreboard freezes at 02:00PM.</td>
+    <td><a href="https://domjudge.umcpc.org">Domjudge</a></td>
+    </tr>
+
+<tr>
+    <td>03:00PM - 03:15PM</td>
+    <td>Judging Verification.</td>
+    <td><a href="https://unimelb.zoom.us/j/91449465840?pwd=Vkx3Qld1d29DUlZiVXh6S3B6bDl2QT09">Zoom Meeting Link</a> <small>(same link as above)</small></td>
+    </tr>
+
+<tr>
+    <td>03:15PM - 03:45PM</td>
+    <td>Awards Presentation.</td>
+    <td><a href="https://unimelb.zoom.us/j/91449465840?pwd=Vkx3Qld1d29DUlZiVXh6S3B6bDl2QT09">Zoom Meeting Link</a> <small>(same link as above)</small></td>
+    </tr>
+</table>
+
+<h2 id="instructions">Instructions</h2>
+First time competing? Forgotten what to do? Follow these instructions and you'll be fine.
+<ol>
+    <li>Solve the prescribed problems as fast as possible.</li>
+    <li>Solve the problems in any order you like.</li>
+    <li>Ensure your output matches the format given for each problem.</li>
+</ol>
+
+<h2 id="rules">Rules</h2>
+Breaking these rules will result in the competitor being <b>disqualified</b> and their prizes forfeit.
+<ol>
+    
+    <li>You must work as an individual. Do not collude with others or work in teams.</li>
+    <li>Use only documentation described below.</li>
+    <li>A prepared programming template is allowed.  You can't copy-paste algorithms though!</li>
+    <li>Don't do anything that would provide an unfair advantage.</li>
+</ol>
+
+<p>
+    If you want to clarify these rules, ask within #competitions and @committee to get our attention.
+</p>
+
+<h2 id="documentation">Permitted Documentation</h2>
+<p>
+You may <b>only</b> use these webpages, as well as any printed material, textbooks or pdfs that are saved <em>locally</em>.  You <b>may not</b> use Google, Stack Overflow or any other internet resources that are not listed below.
+</p>
+<ul>
+ <li><a href="http://contest.sppregional.org/c/en/cpp.html">C++ Reference</a></li>
+ <li><a href="http://contest.sppregional.org/java/index.html">Java Reference</a></li>
+ <li><a href="http://contest.sppregional.org/python3/index.html">Python 3 Reference</a></li>
+ <li><a href="http://contest.sppregional.org/c/en/c.html">C Reference</a></li>
+</ul>
+
+<h2 id="limits">Limits</h2>
+
+<ul>
+ <li>
+     The time limit is different for each problem. 
+     <ul>
+         <li>Java solutions are allowed for 5 times of the time limits stated. </li>
+         <li>Python 3 solutions are allowed for 10 times of the time limited stated.</li>
+     </ul>
+</li>
+ <li>The memory limit for each problem is 512 MiB.</li>
+ <li>The source code limit is 128 KiB.</li>
+</ul>
+
+<h2 id="compile">Compilation Specifications</h2>
+<table>
+<tr><th><u>C++</u></th></tr>
+<tr><th width="20%">Version:</th><td><code>gcc 6.3.0 20170516</code></td></tr>
+<tr><th width>Compilation:</th><td><code>g++ -Wall -O2 -std=c++14 -static -pipe -DONLINE_JUDGE -DDOMJUDGE -o prog prog.cc</code></td></tr>
+<tr><th>Execution:</th><td><code>./prog < input > output</code></li>
+
+<tr><th><br><u>Java</u></th></tr>
+<tr><th width="20%">Version:</th><td><code>1.8.0_181</code></td></tr>
+<tr><th width>Compilation:</th><td><code>javac -encoding UTF-8 -d . prog.java</code></td></tr>
+<tr><th>Execution:</th><td><code>java -client -Xss128m -DONLINE_JUDGE=1 -DDOMJUDGE=1 < input > output</code></li>
+
+<!--
+<tr><th><br><u>Python 2</u></th></tr>
+<tr><th width="20%">Version:</th><td><code>2.7.8</code></td></tr>
+<tr><th width>Compilation:</th><td><code>python -m py_compile prog.py</code><br><i>(Just used to check for Compile Errors, not in the execution of the code)</i></td></tr>
+<tr><th>Execution:</th><td><code>python prog.py < input > output</code></li>
+-->
+
+<tr><th><br><u>Python 3</u></th></tr>
+<tr><th width="20%">Version:</th><td><code>3.5.3</code></td></tr>
+<tr><th width>Compilation:</th><td><code>python3 -m py_compile prog.py3</code><br><i>(Just used to check for Compile Errors, not in the execution of the code)</i></td></tr>
+<tr><th>Execution:</th><td><code>python3 prog.py3 < input > output</code></li>
+
+<tr><th><br><u>C</u></th></tr>
+<tr><th width="20%">Version:</th><td><code>gcc 6.3.0 20170516</code></td></tr>
+<tr><th width>Compilation:</th><td><code>gcc -x c -Wall -O2 -std=c11 -static -pipe -DONLINE_JUDGE -DDOMJUDGE -o prog prog.c -lm</code></td></tr>
+<tr><th>Execution:</th><td><code>./prog < input > output</code></li>
+
+</table>
+<br>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+name: Package docker
+
+on: [push]
+
+jobs:
+  build-core:
+    name: build and push web image
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: src/core
+    steps: 
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Publish Image
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      - name: Build the Docker image
+        run: docker build -t kvoli/umcpcweb .
+      - name: Push the Docker image to the registry
+        run: docker push kvoli/umcpcweb:latest
+  build-contest:
+    name: build and push contest image
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: src/contest
+    steps: 
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Publish Image
+        run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+      - name: Build the Docker image
+        run: docker build -t kvoli/umcpccontest .
+      - name: Push the Docker image to the registry
+        run: docker push kvoli/umcpccontest:latest
