@@ -19,12 +19,12 @@ jobs:
         run: docker build -t kvoli/umcpcweb .
       - name: Push the Docker image to the registry
         run: docker push kvoli/umcpcweb:latest
-      - name: Publish outcome
-          uses: rjstone/discord-webhook-notify@v1
-          with:
-              severity: info
-              details: Shipped to core page to dockerhub.
-              webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Test Success
+        uses: rjstone/discord-webhook-notify@v1
+        with:
+            severity: info
+            details: Deployed main web page to dockerhub.
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
   build-contest:
     name: build and push contest image
     runs-on: ubuntu-latest
@@ -41,9 +41,9 @@ jobs:
         run: docker build -t kvoli/umcpccontest .
       - name: Push the Docker image to the registry
         run: docker push kvoli/umcpccontest:latest
-      - name: Publish outcome
-          uses: rjstone/discord-webhook-notify@v1
-          with:
-              severity: info
-              details: Shipped contest page to dockerhub.
-              webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+      - name: Test Success
+        uses: rjstone/discord-webhook-notify@v1
+        with:
+            severity: info
+            details: Deployed contest page to dockerhub.
+            webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
